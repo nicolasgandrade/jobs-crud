@@ -35,6 +35,11 @@ class Vacancy{
 
     return true;
   }
+
+  public static function getVacancies($where = null, $order = null, $limit = null){
+    return (new Database('jobs'))->select($where, $order, $limit)
+                                  ->fetchAll(PDO::FETCH_CLASS, self::class);
+  }
 }
 
 ini_set('display_errors',1);
