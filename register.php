@@ -11,6 +11,9 @@ if(isset($_POST['title'], $_POST['description'], $_POST['active'])){
     $objVacancy->description = $_POST['description'];
     $objVacancy->active = $_POST['active'];
     $objVacancy->register();
+
+    header('location: index.php?status=success');
+    exit;
 }
 
 include __DIR__.'/includes/header.php';

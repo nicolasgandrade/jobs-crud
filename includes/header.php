@@ -15,7 +15,7 @@
     <div class="jumbotron bg-danger p-3">
         <div class="container">
             <h1>Jobs List</h1>
-            <p>PHP CRUD project usign OOP</p>
+            <p>PHP CRUD project using OOP</p>
         </div>
     </div>
 

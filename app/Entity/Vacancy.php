@@ -23,7 +23,17 @@ class Vacancy{
 
     // Insert new job vacancy
     $objDatabase = new Database('jobs');
-    print_r($objDatabase);
+     
+    $this->id = $objDatabase->Insert([
+      'title' => $this->title,
+      'description' => $this->description,
+      'active' => $this->active,
+      'date' => $this->date
+    ]);
+
+    // echo '<pre>'; print_r($this); echo '</pre>'; exit;
+
+    return true;
   }
 }
 
